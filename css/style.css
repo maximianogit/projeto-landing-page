@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Asap:wght@700&family=Galada&family=Great+Vibes&family=Inconsolata:wght@600&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat+Alternates:ital,wght@0,100;0,400;0,500;0,600;0,900;1,300&family=Nunito:wght@700&family=Oswald:wght@200;400;700&family=Playball&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:wght@300&family=Ubuntu+Condensed&family=Yellowtail&display=swap');
+
+/* 
+    font-family: 'Archivo Black', sans-serif;
+    font-family: 'Asap', sans-serif;
+    font-family: 'Galada', cursive;
+    font-family: 'Great Vibes', cursive;
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Playball', cursive;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-family: 'Yellowtail', cursive;
+*/
+
+  *{
+    box-sizing: border-box;
+  }
+
+  html,body{
+    padding: 0;
+    margin: 0;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  body{
+    height: 2190px;
+    display: grid;
+    grid: 
+    'h h' 25.57%
+    'n n' 7.86%
+    'm m' 20.9%
+    's s' 20.27%
+    'f f' 25.40%
+    / 100%
+    ;
+  }
+
+  header{
+    grid-area: h;
+    background-image: url("../imgDNC/background-header.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid: 
+    'logo logo' 30%
+    'info info' 70%
+    / 2fr 2fr
+    ;
+  }
+
+  header div.logo{
+    grid-area: logo;
+  }
+
+  header div.logo img{
+    margin: 56px 52px;
+  }
+
+  div.info-dnc-header{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content:center;
+    align-items: flex-end;
+
+  }
+
+  div.info-dnc-header h1, div.info-dnc-header p{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #fff;
+    width: 72%;
+    height: 25%;
+  }
+
+  div.info-dnc-header h1{
+    line-height: 128.5%;
+    font-size: 2rem;
+  }
+
+  div.info-dnc-header p{
+    line-height: 150%;
+    font-size: 1.2em;
+  }
+
+  nav{
+    grid-area: n;
+    background-color: #EAECE5;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  div.certificate, div.hours, div.classes{
+    display: flex;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+
+  div.certificate img, div.hours img, div.classes img{
+    margin-right: 20px;
+  }
+
+  div.certificate a, div.hours a, div.classes a{
+    color: #122235;
+  }
+
+main{
+  grid-area: m;
+  display: grid;
+  grid: 
+  'v i' 100%
+  / 50% 50% 
+  ;
+  
+}
+
+div.promotional-video{
+  grid-area: v;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+div.promotional-video iframe{
+  width: 90%;
+  height: 80%;
+  padding-right: 5%;
+}
+
+main .info-main{
+  grid-area: i;
+ line-height: 150%;
+
+}
+
+main .info-main h2, main .info-main p{
+  width: 80%;
+  height: 24%;
+}
+
+main .info-main h2{
+  margin-top: 50px;
+  font-family: 'Inter';
+  color:#247BA0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+main .info-main p{
+  color: #383838;
+  font-family: 'Inter';
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+section.carousel-container{
+  width: 100%;
+  background: #247BA0;
+}
+
+section.carousel-container h1{
+  color: #fff;
+  font-family: 'Inter';
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.carousel-cards{
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards-students{
+  overflow: hidden;
+  transition: all ease 0.3s;
+  text-align: center;
+}
+
+
+.cards-students img{
+
+}
+
+.arrow-left, .arrow-right{
+  cursor: pointer;
+}
+
+.arrow-left{
+  margin: 0;
+}
+
+.arrow-right{
+  margin: 0;
+}
+
+
+
+.arrow-left:hover, .arrow-right:hover{
+ transform: translateY(-7px);/*Ira subir 7 px*/
+ transition-duration: .3s;
+}
+
+
+footer{
+  grid-area: f;
+  background-color: #fff;
+}
+
+footer h2{
+  text-align: center;
+  color:#247BA0;
+  font-family: Inter;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  margin-bottom: 47px;
+  margin: 25px;
+}
+
+footer form{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer form input{
+  width: 40%;
+  height: 53px;
+  flex-shrink: 0;
+  background-color: #EAECE5;
+  margin-bottom: 39px;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+}
+
+::-webkit-input-placeholder { 
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+
+ }
+
+input:-moz-placeholder{ 
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+
+form button{
+  width: 35%;
+  height: 53px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background:#247BA0;
+  border: none;
+  color: #EAECE5;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form button:hover{
+  background:#51add4;
+  color: #fff;
+  transform: translateY(-7px);
+  transition-duration: .5s;
+  box-shadow: 0px 15px 20px #03354bac;
+}
+
+
+
+@media screen and (max-width: 1072px){
+
+  header div.logo img{
+    width: 162px;
+    height: 52px;
+    margin: 46px 12px;
+  }
+
+  div.info-dnc-header h1{
+    line-height: 128.5%;
+    font-size: 1.4rem;
+  }
+
+  div.info-dnc-header p{
+    line-height: 150%;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 861px){
+  body{
+    height: 2630px;
+    display: grid;
+    grid: 
+    'h h' 25.57%
+    'n n' 7.86%
+    'm m' 41.8%
+    's s' 20.27%
+    'f f' 25.40%
+    / 100%
+    ;
+  }
+ 
+  main{
+    grid-area: m;
+    display: grid;
+    grid: 
+    'v v' 50%
+    'i i' 50%
+    / 50% 50% 
+    ;
+    
+  }
+
+  div.info-main h2{
+    font-size: 18px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  div.info-main p{
+    font-size: 14px;
+    margin: 0 auto;
+  }
+  
+  
+
+  footer form input{
+    width: 60%;
+  }
+
+}
+
+@media screen and (max-width: 750px){
+
+  footer form input{
+    width: 90%;
+  }
+
+  form button{
+    min-width: 202px;
+  }
+}
+
+@media screen and (max-width: 660px){
+  
+  header{
+    grid-area: h;
+    background-image: url("../imgDNC/background-header.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid: 
+    'logo logo' 10%
+    'info info' 80%
+    / 2fr 2fr
+    ;
+  }
+
+  header div.logo{
+    grid-area: logo;
+    width: 80px;
+  }
+
+  header div.logo img{
+    margin: 18px 14px;
+  }
+
+
+  div.info-dnc-header h1, div.info-dnc-header p{
+    height: 28%;
+  }
+
+  div.info-dnc-header h1{
+    font-size: 1.2rem;
+  }
+
+  div.info-dnc-header p{
+    font-size: .7em;
+  }
+}
